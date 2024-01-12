@@ -22,6 +22,7 @@ public class User implements UserDetails {
 
     private String email;
 
+    @Column(length = 255)
     private String password;
 
     private UserRole role;

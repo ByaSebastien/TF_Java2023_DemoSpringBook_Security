@@ -10,4 +10,6 @@ public interface UserRepository extends JpaRepository<User,Long> {
 
     @Query("select u from User u where u.email like :email")
     public Optional<User> findUserByEmail(String email);
+
+    public boolean existsByEmail(String email);
 }
